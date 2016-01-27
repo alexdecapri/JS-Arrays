@@ -4,8 +4,8 @@
 var arr = [10,20,30];
 //Create a function named 'first' that is given 'arr' as the argument and  returns the first item in the given array.
 
-function first(arr) {
-  return arr[0];
+function first(array) {
+  return array[0];
 }
 
 first(arr);
@@ -19,8 +19,8 @@ var arr = [40,50,60];
 //Create a function named 'last' that is given 'arr' as the argument and returns the last item in the given array.
 
 
-function last(arr) {
-  return arr[arr.length-1];
+function last(array) {
+  return array[arr.length-1];
 }
 
 last(arr);
@@ -68,15 +68,17 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 //only argument and removes all values that aren't even from the 
 //given array.
 
+var newArr = [];
 function evenFinder(nums) {
-  for (var i = 0, i < nums.length; i++) {
-    if (nums[i] % 2 !== 0) {
-      nums.splice(i, 1);
+  for (var i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 === 0) {
+      newArr.push(nums[i]);
     };
   }
 }
 
 evenFinder(nums);
+console.log(newArr); //ANNOYING, LEARN THIS
 
 
 //Next problem
@@ -85,8 +87,12 @@ evenFinder(nums);
 var nums = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 var evens = [];
 var odds = [];
-//Write a function called divider that is given three arguments, nums, evens, and odds.
-//Have divider return an Array with the first item in the array being the evens array (all the even values from nums) and the second item in the Array being the odds array(all the odd values from nums).
+//Write a function called divider that is given three arguments, 
+//nums, evens, and odds.
+//Have divider return an Array with the first item in the array 
+//being the evens array (all the even values from nums) and the 
+//second item in the Array being the odds array(all the odd values 
+//from nums).
 
 
 
