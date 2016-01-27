@@ -179,11 +179,11 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 function removeItem(list, item) {
   for (var i = 0; i < list.length; i++) {
     if (item === list[i]) {
-      list = list.splice(item, 1);
+      list.splice(i, 1);
     }
-    return list;
   }
-} //NOT RIGHT
+  return list;
+}
 
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
