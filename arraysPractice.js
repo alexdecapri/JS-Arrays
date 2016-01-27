@@ -184,13 +184,21 @@ function removeItem(list, item) {
   }
   return list;
 }
+//below addItem is not correct
+function addItem (list, item) {
+  for (var i = list.length-1; i = 0; i--) {
+    if (item !== list[i]) {
+      list.push(item);
+    }
+  }
+  return list;
+}
 
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 
 
 
-//Next Problem
 
 
 
