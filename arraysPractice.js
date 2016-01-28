@@ -185,10 +185,13 @@ function removeItem(list, item) {
   return list;
 }
 //below addItem is not correct
-function addItem (list, item) {
-  for (var i = list.length-1; i = 0; i--) {
+function addItem(list, item) {
+  for (var i = 0; i < list.length; i++) {
     if (item !== list[i]) {
       list.push(item);
+      if (list.push(item)) {
+        break; //getting better, only repeats twice now... hmm...
+      }
     }
   }
   return list;
@@ -202,10 +205,14 @@ function addItem (list, item) {
 
 
 
-//Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
+//Write a function called maker that creates an array, fills that 
+//array with numbers from 1 to 215, then returns the array.
 
-  //Code Here
+function maker() {
+  var arr = [];
 
+}
+//not done
 
 
 //Next Problem
