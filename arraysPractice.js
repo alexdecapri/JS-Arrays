@@ -210,9 +210,11 @@ function addItem(list, item) {
 
 function maker() {
   var arr = [];
-
+  for (var i = 0; i < 5; i++) {
+    arr.push(Math.floor((Math.random() * 215) + 1));
+  }
+  return arr;
 }
-//not done
 
 
 //Next Problem
