@@ -228,14 +228,11 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
 function addTen(numbers) {
-  for (var i = 0; i < numbers.length; i++) {
-    if (typeof numbers[i] === number || string) {
-      i = [i] + 10;
-    }
-  }
+  numbers.forEach(function(number, i) {     //passing in a function into this
+      numbers[i] = parseInt(number) + 10;   //could declare function above and have: numbers.forEach(functioName); - this would be go through each value of the array
+  });
+  return numbers;
 }
-//not correct
-
 
 
 
@@ -253,10 +250,14 @@ for(var i = 0; i < num1; i++){
 for(var i = 0; i < num2; i++){
   arr2.push(i);
 }
-//Above is some code that adds a random number of values to both arr1 and arr2.
-//Write a function called 'longer' that is given arr1 and arr2 as it's only arguments. Return the array which is longest.
+//Above is some code that adds a random number of values to both arr1 
+//and arr2.
+//Write a function called 'longer' that is given arr1 and arr2 
+//as it's only arguments. Return the array which is longest.
 
-  //Code Here
+function longer(arr1, arr2) {
+  
+}
 
 
 /*As a continuation of the previous problem, write another function called 'both'.
