@@ -149,7 +149,7 @@ function reverse(str) {
   return str.split("").reverse().join("");
 }
 
-reverse(str);
+reverse(str); //invoking function
 
 
 //Next Problem
@@ -188,7 +188,7 @@ function removeItem(list, item) {
 function addItem(list, item) {
   for (var i = 0; i < list.length; i++) {
     if (item !== list[i]) {
-      list.push(item);
+      list.unshift(item);
       if (list.push(item)) {
         break; //getting better, only repeats twice now... hmm...
       }
@@ -196,6 +196,7 @@ function addItem(list, item) {
   }
   return list;
 }
+//NOT WORKING!!!!!!!!!
 
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
