@@ -184,19 +184,19 @@ function removeItem(list, item) {
   }
   return list;
 }
-//below addItem is not correct
+
+
 function addItem(list, item) {
   for (var i = 0; i < list.length; i++) {
-    if (item !== list[i]) {
-      list.unshift(item);
-      if (list.push(item)) {
-        break; //getting better, only repeats twice now... hmm...
-      }
+    if (list[i] === item) {
+      return list;
     }
   }
-  return list;
+  list.push(item);
 }
-//NOT WORKING!!!!!!!!!
+
+//adds item and makes sure it won't add an item that is already on list
+
 
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
