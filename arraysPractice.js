@@ -1,10 +1,12 @@
 //Once you complete a problem, open up Chrome and check the answer in the console.
 
+//CHECK OUT JASMINE!!!!!!!!
 
 var arr = [10,20,30];
 //Create a function named 'first' that is given 'arr' as the argument and  returns the first item in the given array.
 
 function first(array) {
+  arr = arr || []; //defaults it to an empty array
   return array[0];
 }
 
@@ -20,7 +22,7 @@ var arr = [40,50,60];
 
 
 function last(array) {
-  return array[arr.length-1];
+  return array[array.length - 1];
 }
 
 last(arr);
@@ -177,6 +179,7 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 function removeItem(list, item) {
+  list = list || []; //helps debug Jasmine in case invoked without arguments
   for (var i = 0; i < list.length; i++) {
     if (item === list[i]) {
       list.splice(i, 1);
@@ -187,6 +190,7 @@ function removeItem(list, item) {
 
 
 function addItem(list, item) {
+  list = list || []; //helps debug Jasmine in case invoked without argument
   for (var i = 0; i < list.length; i++) {
     if (list[i] === item) {
       return list;
@@ -256,7 +260,15 @@ for(var i = 0; i < num2; i++){
 //as it's only arguments. Return the array which is longest.
 
 function longer(arr1, arr2) {
-  
+  if (arr1.length > arr2.length) {
+    return arr1;
+  }
+  else if (arr1.length < arr2.length) {
+    return arr2;
+  }
+  else if (arr1.length === arr2.length) {
+    return ("They are equal in length!");
+  }
 }
 
 
