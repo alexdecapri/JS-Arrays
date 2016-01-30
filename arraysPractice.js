@@ -107,7 +107,7 @@ function divider(nums, evens, odds) {
       odds.push(nums[i]);
     }
   }
-  return [evens, odds]
+  return [evens, odds];
 }
 
 divider(nums, evens, odds);
@@ -435,7 +435,6 @@ Once you find the particular index he's located in,
 delete him from the array.*/
 
 for (var i = 0; i < users.length; i++) {
-  debugger;
   if (users[i].email === "tylermcginnis33@gmail.com") {
     users.splice(users[i], 1);
   }
